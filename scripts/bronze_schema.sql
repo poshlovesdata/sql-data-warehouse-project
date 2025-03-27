@@ -4,12 +4,12 @@ BEGIN;
 -- Drop and recreate the customer information table in the bronze schema
 DROP TABLE IF EXISTS bronze.crm_cust_info;
 CREATE TABLE bronze.crm_cust_info (
-    cust_id INT,
+    cst_id INT,
     cst_key VARCHAR,
     cst_firstname VARCHAR(50),
     cst_lastname VARCHAR(50),
     cst_marital_status VARCHAR(50),
-    cst_gender VARCHAR(50),
+    cst_gndr VARCHAR(50),
     cst_create_date DATE
 );
 
