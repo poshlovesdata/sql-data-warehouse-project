@@ -14,8 +14,8 @@ CREATE TABLE bronze.crm_cust_info (
 );
 
 -- Drop and recreate the product information table in the bronze schema
-DROP TABLE IF EXISTS bronze.prd_info;
-CREATE TABLE bronze.prd_info (
+DROP TABLE IF EXISTS bronze.crm_prd_info;
+CREATE TABLE bronze.crm_prd_info (
     prd_id INT,
     prd_key VARCHAR(50),
     prd_nm VARCHAR(50),
@@ -26,8 +26,8 @@ CREATE TABLE bronze.prd_info (
 );
 
 -- Drop and recreate the sales transaction details table in the bronze schema
-DROP TABLE IF EXISTS bronze.sales_details;
-CREATE TABLE bronze.sales_details (
+DROP TABLE IF EXISTS bronze.crm_sales_details;
+CREATE TABLE bronze.crm_sales_details (
     sls_ord_num VARCHAR(50),
     sls_prod_key VARCHAR(50),
     sls_cust_id INT,
@@ -40,23 +40,23 @@ CREATE TABLE bronze.sales_details (
 );
 
 -- Drop and recreate the customer-specific data table in the bronze schema
-DROP TABLE IF EXISTS bronze.cust_az12;
-CREATE TABLE bronze.cust_az12 (
+DROP TABLE IF EXISTS bronze.erp_cust_az12;
+CREATE TABLE bronze.erp_cust_az12 (
     cid VARCHAR(50),
     bdate DATE,
     gen VARCHAR(50)
 );
 
 -- Drop and recreate the customer location details table in the bronze schema
-DROP TABLE IF EXISTS bronze.loc_a101;
-CREATE TABLE bronze.loc_a101 (
+DROP TABLE IF EXISTS bronze.erp_loc_a101;
+CREATE TABLE bronze.erp_loc_a101 (
     cid VARCHAR(50),
     cntry VARCHAR(50)
 );
 
 -- Drop and recreate the product category and maintenance information table in the bronze schema
-DROP TABLE IF EXISTS bronze.px_cat_g1v2;
-CREATE TABLE bronze.px_cat_g1v2 (
+DROP TABLE IF EXISTS bronze.erp_px_cat_g1v2;
+CREATE TABLE bronze.erp_px_cat_g1v2 (
     id VARCHAR(50),
     cat VARCHAR(50),
     maintenance VARCHAR(50)
